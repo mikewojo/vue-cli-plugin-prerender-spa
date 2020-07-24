@@ -73,4 +73,4 @@ typings/
 .serverless
 
 # Babel files output
-/*.js
+#/*.js
