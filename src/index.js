@@ -39,7 +39,7 @@ function chain(api, projectOptions) {
     };
     config.plugin("pre-render").use(PrerenderSPAPlugin, [prerenderOptions]);
     if (process.env.NODE_ENV === "production") {
-      config.plugin("html").tap(args => {
+      config.plugin("html-app").tap(args => {
         args[0].template = api.resolve("public/index.html");
         args[0].filename = "app.html";
         return args;
